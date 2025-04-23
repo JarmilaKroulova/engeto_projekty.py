@@ -52,19 +52,25 @@ else:
     print("Unregistered user, terminating the program..")
     quit()
 
-vyber_textu = int(input(f"Enter a number btw. 1 and {pocet_textu} to select: "))
-
 print(ODDELOVAC)
 
-if vyber_textu == 1:
-    text = TEXTS[0]
-elif vyber_textu == 2:
-    text = TEXTS[1]
-elif vyber_textu == 3:
-    text = TEXTS[2]
+for _ in range(3):
+    vyber_textu = input(f"Enter a number btw. 1 and {pocet_textu} to select: ")
+    if vyber_textu.isdigit():
+        volba = int(vyber_textu)
+        if 0 < volba <= pocet_textu:
+            text = TEXTS[volba-1]
+            print(ODDELOVAC)
+            break
+        else:
+            print("Try again! This is not in correct range.")
+    else:
+        print("Try again! This is not a number.")
 else:
-    print("Select number is not in the offer.")
+    print("You are failed. Terminating program.")
+    quit()
 
+print(ODDELOVAC)
 
 ciste_slovo = list()
 
