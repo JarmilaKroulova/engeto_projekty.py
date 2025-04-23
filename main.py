@@ -77,30 +77,19 @@ ciste_slovo = [slovo.strip(",.:?!") for slovo in text.split()]
 pocet_slov = len(ciste_slovo)
 
 titlecase = []
+uppercase = []
+lowercase = [] 
     
 for slovo in ciste_slovo: 
     if slovo.istitle():
-        zacina_velkym = slovo
-        titlecase.append(zacina_velkym)
+        titlecase.append(slovo)
+    elif slovo.isupper():
+        uppercase.append(slovo)
+    elif slovo.islower():
+        lowercase.append(slovo)
 
 zacinajici_velkym = len(titlecase)
-
-uppercase = []
-    
-for slovo in ciste_slovo: 
-    if slovo.isupper():
-        je_velkym = slovo
-        uppercase.append(je_velkym)
-
 je_velke = len(uppercase)
-
-lowercase = []
-    
-for slovo in ciste_slovo: 
-    if slovo.islower():
-        je_malym = slovo
-        lowercase.append(je_malym)
-
 je_male = len(lowercase)
 
 cisla = []
