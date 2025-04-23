@@ -96,18 +96,10 @@ cisla = []
     
 for cifra in ciste_slovo: 
     if cifra.isnumeric():
-        je_cislem = cifra
-        cisla.append(je_cislem)
+        cisla.append(int(cifra))
 
 je_cislo = len(cisla)
-
-realna_cisla = []
-
-for cislo in cisla:
-    je_realne = cislo
-    realna_cisla.append(int(je_realne))
-
-soucet = sum(realna_cisla)
+soucet = sum(cisla)
 
 delka_slov = [len(slovo) for slovo in ciste_slovo]
 
