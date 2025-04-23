@@ -103,36 +103,11 @@ soucet = sum(cisla)
 
 delka_slov = [len(slovo) for slovo in ciste_slovo]
 
-slovo_1 = delka_slov.count(1)
-slovo_2 = delka_slov.count(2)
-slovo_3 = delka_slov.count(3)
-slovo_4 = delka_slov.count(4)
-slovo_5 = delka_slov.count(5)
-slovo_6 = delka_slov.count(6)
-slovo_7 = delka_slov.count(7)
-slovo_8 = delka_slov.count(8)
-slovo_9 = delka_slov.count(9)
-slovo_10 = delka_slov.count(10)
-slovo_11 = delka_slov.count(11)
-slovo_12 = delka_slov.count(12)
-slovo_13 = delka_slov.count(13)
 
+slovnik_delky = {}
+for delka in set(delka_slov):
+    slovnik_delky[delka] = delka_slov.count(delka)
 
-slovnik_delky = {
-    "1" : slovo_1,
-    "2" : slovo_2,
-    "3" : slovo_3,
-    "4" : slovo_4,
-    "5" : slovo_5,
-    "6" : slovo_6,
-    "7" : slovo_7,
-    "8" : slovo_8,
-    "9" : slovo_9,
-    "10" : slovo_10,
-    "11" : slovo_11,
-    "12" : slovo_12,
-    "13" : slovo_13    
-}
 
 print(f"There are {pocet_slov} words in the selected text.")
 print(f"There are {zacinajici_velkym} titlecase words.")
