@@ -72,11 +72,7 @@ else:
 
 print(ODDELOVAC)
 
-ciste_slovo = list()
-
-for slovo in text.split():
-    jen_slovo = slovo.strip(",.:?!")
-    ciste_slovo.append(jen_slovo)
+ciste_slovo = [slovo.strip(",.:?!") for slovo in text.split()]
 
 pocet_slov = len(ciste_slovo)
 
