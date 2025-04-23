@@ -52,7 +52,6 @@ else:
     print("Unregistered user, terminating the program..")
     quit()
 
-print(ODDELOVAC)
 
 for _ in range(3):
     vyber_textu = input(f"Enter a number btw. 1 and {pocet_textu} to select: ")
@@ -69,8 +68,6 @@ for _ in range(3):
 else:
     print("You are failed. Terminating program.")
     quit()
-
-print(ODDELOVAC)
 
 ciste_slovo = [slovo.strip(",.:?!") for slovo in text.split()]
 
@@ -120,7 +117,5 @@ print(f"{ODDELOVAC}\nLEN|  OCCURENCES          |NR\n{ODDELOVAC}")
 
 for radek in slovnik_delky.items():
     delka, vyskyt = radek
-    if vyskyt == 0:
-            continue
-    else:
+    if vyskyt > 0:
         print(f"{delka:<2} | {'*' * int(vyskyt):<30} | {vyskyt}")
